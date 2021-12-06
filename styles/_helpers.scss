@@ -1,0 +1,20 @@
+// font color
+
+$font-color: #717FA6;
+$black: #1F2E55; 
+$primary-color: hsl(225, 100%, 94%);
+$change-color: #382AE1;
+
+@mixin btn($bg-color, $color, $btn-width, $font-weight, $font-size, $border-radius) {
+    background-color: $bg-color;
+    color: $color;
+    width: $btn-width;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    border-radius: $border-radius;
+}
+ 
+@mixin hover-styles($cursor-style, $color) {
+    cursor: $cursor-style;
+    color: $color;
+}

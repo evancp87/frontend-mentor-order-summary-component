@@ -1,0 +1,177 @@
+@import "normalize.scss";
+@import "_helpers";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background: {
+    image: url("../images/pattern-background-desktop.svg");
+    color: $primary-color;
+    repeat: no-repeat;
+    size: contain;
+    position: top;
+  }
+  max-width: 1440px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 5em 0;
+  background-color: #fff;
+  max-width: 450px;
+  border-radius: 15px;
+  align-items: center;
+}
+
+.hero {
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.text-wrapper {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.order-text {
+  padding: 0.7rem;
+
+  & > h1 {
+    font-weight: 800;
+    color: $black;
+  }
+
+  p {
+    font-weight: 400;
+    color: $font-color;
+  }
+}
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  background-color: #f3f8ff;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+
+  &:first-child {
+    padding: 0;
+  }
+
+  &:last-child(2) {
+    margin-left: 1em;
+  }
+}
+
+.music-img {
+  display: flex;
+  flex-grow: 2;
+  max-width: 50px;
+  height: 50px;
+  align-self: center;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.plan {
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.change {
+  display: flex;
+  flex-grow: 2;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: underline;
+  color: $change-color;
+  font-weight: 800;
+  margin: {
+    top: 0.1em;
+    bottom: 0;
+    left: 1em;
+  }
+  &:hover {
+    @include hover-styles(pointer, #766cf1);
+  }
+}
+
+.plan p:first-of-type {
+  font-weight: 800;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 15px 15px 0 0;
+  display: block;
+}
+
+.pay {
+  p {
+    color: $font-color;
+    font-weight: 800;
+    margin-bottom: 0.3em;
+
+    &:hover {
+      @include hover-styles(pointer, $black);
+    }
+  }
+}
+
+.pay-btn {
+  @include btn(#382ae1, #fff, 92%, 900, 0.9em, 11px);
+
+  margin: 1em 0 1em 0;
+  padding: 1em;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  border-radius: 11px;
+
+  &:hover {
+    background-color: #766cf1;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 477px) {
+  body {
+    background-image: url("../images/pattern-background-mobile.svg");
+  }
+
+  .container {
+    max-width: 90vw;
+  }
+
+  .plan {
+    font-size: 0.8em;
+  }
+  .change {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .order-text {
+    padding-top: 0.3em;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
