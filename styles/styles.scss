@@ -1,7 +1,6 @@
 @import "normalize.scss";
 @import "_helpers";
 
-
 * {
   box-sizing: border-box;
 }
@@ -32,12 +31,11 @@ main {
   text-align: center;
 }
 
-
 // main container for card
 .container {
   display: flex;
   flex-direction: column;
- margin-top: 1rem;
+  margin-top: 1rem;
   background-color: #fff;
   max-width: 450px;
   border-radius: 15px;
@@ -57,11 +55,11 @@ main {
 }
 
 .order-text {
-    padding: {
+  padding: {
     top: 0.1em;
     left: 3em;
     right: 3em;
-    }
+  }
   & > h1 {
     font-weight: 800;
     color: $black;
@@ -175,5 +173,3 @@ img {
     font-size: 0.8em;
   }
 }
-
-
