@@ -352,6 +352,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top;
+  overflow: hidden;
   max-width: 1440px;
   height: 100%;
   display: flex;
@@ -367,7 +368,7 @@ main {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 5em 0;
+  margin-top: 1rem;
   background-color: #fff;
   max-width: 450px;
   border-radius: 15px;
@@ -381,12 +382,13 @@ main {
 }
 
 .text-wrapper {
-  padding: 1rem;
   margin: 1rem;
 }
 
 .order-text {
-  padding: 0.7rem;
+  padding-top: 0.1em;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 .order-text > h1 {
   font-weight: 800;
@@ -496,13 +498,6 @@ img {
 
   .change {
     font-size: 0.8em;
-  }
-}
-@media only screen and (min-width: 700px) {
-  .order-text {
-    padding-top: 0.3em;
-    padding-left: 3em;
-    padding-right: 3em;
   }
 }
 
